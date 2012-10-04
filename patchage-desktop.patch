@@ -1,0 +1,16 @@
+diff -aurN patchage-0.4.4.orig/patchage.desktop.in patchage-0.4.4/patchage.desktop.in
+--- patchage-0.4.4.orig/patchage.desktop.in	2010-01-01 13:50:14.000000000 +0100
++++ patchage-0.4.4/patchage.desktop.in	2010-01-01 13:51:02.000000000 +0100
+@@ -1,9 +1,9 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+ Name=@APP_HUMAN_NAME@
+ Comment=Connect audio and MIDI applications together and manage audio sessions
+-Exec=@BINDIR@/@APP_INSTALL_NAME@
++Exec=@APP_INSTALL_NAME@
+ Terminal=false
+ Icon=@APP_INSTALL_NAME@
+ Type=Application
+-Categories=Application;AudioVideo;Audio
++Categories=GTK;AudioVideo;Audio;
++
