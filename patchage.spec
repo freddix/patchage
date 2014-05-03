@@ -1,18 +1,16 @@
 Summary:	Modular patch bay for audio and MIDI systems
 Name:		patchage
-Version:	0.5.0
-Release:	4
+Version:	1.0.0
+Release:	1
 License:	GPL v2
 Group:		Applications
 Source0:	http://download.drobilla.net/%{name}-%{version}.tar.bz2
-# Source0-md5:	3f1c297c8c6b998563d1a2fbc215cf85
+# Source0-md5:	d16a3fc045faff7fd70f3b4769b65698
 Patch0:		%{name}-desktop.patch
 BuildRequires:	alsa-lib-devel
 BuildRequires:	dbus-glib-devel
-BuildRequires:	flowcanvas-devel
+BuildRequires:	ganv-devel
 BuildRequires:	jack-audio-connection-kit-devel
-BuildRequires:	libglademm-devel
-BuildRequires:	libgnomecanvasmm-devel
 BuildRequires:	raul-devel
 Provides:	jack-patch-bay
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -21,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 
 %build
 export CC="%{__cc}"
