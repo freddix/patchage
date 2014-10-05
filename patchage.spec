@@ -1,7 +1,7 @@
 Summary:	Modular patch bay for audio and MIDI systems
 Name:		patchage
 Version:	1.0.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications
 Source0:	http://download.drobilla.net/%{name}-%{version}.tar.bz2
@@ -10,8 +10,9 @@ Patch0:		%{name}-desktop.patch
 BuildRequires:	alsa-lib-devel
 BuildRequires:	dbus-glib-devel
 BuildRequires:	ganv-devel
+BuildRequires:	gtkmm-devel
 BuildRequires:	jack-audio-connection-kit-devel
-BuildRequires:	raul-devel
+BuildRequires:	libstdc++-devel
 Provides:	jack-patch-bay
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,7 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 ./waf -v install	\
 	--destdir=$RPM_BUILD_ROOT
 
-rm -rf $RPM_BUILD_ROOT%{_iconsdir}/hicolor/512x512
+%{__rm} -r $RPM_BUILD_ROOT%{_iconsdir}/hicolor/512x512
 
 %clean
 rm -rf $RPM_BUILD_ROOT
